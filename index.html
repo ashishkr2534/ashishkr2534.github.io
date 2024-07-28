@@ -3,60 +3,141 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sample HTML Page</title>
+    <title>Skypr Cars - Car Wash Center</title>
     <style>
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f0f0f0;
+            background-color: #f4f4f4;
         }
         header {
-            background-color: #4CAF50;
-            color: white;
-            padding: 1em;
+            background-color: #333;
+            color: #fff;
+            padding: 1rem 0;
             text-align: center;
         }
-        nav {
-            margin: 0;
-            padding: 1em;
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+        }
+        .services, .feedbacks {
+            display: flex;
+            justify-content: space-around;
+            margin: 2rem 0;
+        }
+        .service, .feedback {
+            background: #fff;
+            padding: 1rem;
+            border: 1px solid #ddd;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            width: 30%;
+        }
+        .service img, .feedback img {
+            width: 100%;
+            height: auto;
+        }
+        .feedback img {
+            border-radius: 50%;
+            width: 80px;
+            height: 80px;
+        }
+        .contact {
+            background: #fff;
+            padding: 2rem;
+            border: 1px solid #ddd;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin: 2rem 0;
+        }
+        .contact form {
+            display: flex;
+            flex-direction: column;
+        }
+        .contact form input, .contact form textarea {
+            margin-bottom: 1rem;
+            padding: 0.5rem;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        .contact form button {
+            padding: 0.5rem;
             background-color: #333;
-        }
-        nav a {
-            color: white;
-            padding: 0.5em;
-            text-decoration: none;
-        }
-        main {
-            padding: 1em;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
         }
         footer {
             background-color: #333;
-            color: white;
+            color: #fff;
             text-align: center;
-            padding: 1em;
-            position: fixed;
-            width: 100%;
-            bottom: 0;
+            padding: 1rem 0;
+            margin-top: 2rem;
         }
     </style>
 </head>
 <body>
     <header>
         <h1>Welcome to Skypr Cars</h1>
+        <p>Your one-stop solution for car washing</p>
     </header>
-    <nav>
-        <a href="#">Home</a>
-        <a href="#">About</a>
-        <a href="#">Contact</a>
-    </nav>
-    <main>
-        <h2>About This Page</h2>
-        <p>This is a sample HTML page with a basic layout. You can use this as a starting point for creating your own web pages.</p>
-        <p>It includes a header, navigation bar, main content area, and a footer.</p>
-    </main>
+
+    <div class="container">
+        <section class="services">
+            <div class="service">
+                <h2>Premium Wash</h2>
+                <img src="https://lh3.googleusercontent.com/p/AF1QipOkGjw3MKnin-B-g3s_WZPLHMo-YSbupF-9CYrk=s1360-w1360-h1020" alt="Premium Wash">
+                <p>Complete and thorough cleaning with premium products and attention to detail.</p>
+            </div>
+            <div class="service">
+                <h2>Smart Wash</h2>
+                <img src="https://lh3.googleusercontent.com/p/AF1QipPSZpIpUeMiw-MAQSeeBnsTqoF2kZHTIWeB5K4U=s1360-w1360-h1020" alt="Smart Wash">
+                <p>Efficient and effective cleaning that balances quality and time.</p>
+            </div>
+            <div class="service">
+                <h2>Quick Wash</h2>
+                <img src="https://lh3.googleusercontent.com/p/AF1QipPSZpIpUeMiw-MAQSeeBnsTqoF2kZHTIWeB5K4U=s1360-w1360-h1020" alt="Quick Wash">
+                <p>Fast and reliable wash for when you are in a hurry but still need quality.</p>
+            </div>
+        </section>
+
+	<h1>Customer Reviews</h1>
+        <p>Reviews</p>
+
+
+        <section class="feedbacks">
+            <div class="feedback">
+                <img src="https://lh3.googleusercontent.com/p/AF1QipPSZpIpUeMiw-MAQSeeBnsTqoF2kZHTIWeB5K4U=s1360-w1360-h1020" alt="User Image">
+                <p>"Great service! My car looks brand new after the Premium Wash."</p>
+                <p><strong>- John Doe</strong></p>
+            </div>
+            <div class="feedback">
+                <img src=https://lh3.googleusercontent.com/p/AF1QipPSZpIpUeMiw-MAQSeeBnsTqoF2kZHTIWeB5K4U=s1360-w1360-h1020" alt="User Image">
+                <p>"The Smart Wash is quick and effective. Highly recommend it."</p>
+                <p><strong>- Jane Smith</strong></p>
+            </div>
+            <div class="feedback">
+                <img src="https://lh3.googleusercontent.com/p/AF1QipPSZpIpUeMiw-MAQSeeBnsTqoF2kZHTIWeB5K4U=s1360-w1360-h1020" alt="User Image">
+                <p>"Quick Wash is perfect for busy schedules. Great quality!"</p>
+                <p><strong>- Emily Davis</strong></p>
+            </div>
+        </section>
+
+        <section class="contact">
+            <h2>Contact Us</h2>
+            <form>
+                <input type="text" placeholder="Your Name" required>
+                <input type="email" placeholder="Your Email" required>
+                <textarea placeholder="Your Message" rows="5" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </section>
+    </div>
+
     <footer>
-        <p>&copy; 2024 Your Name. All rights reserved.</p>
+        <p>&copy; 2024 Skypr Cars. All rights reserved.</p>
     </footer>
 </body>
 </html>
